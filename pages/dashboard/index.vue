@@ -75,7 +75,10 @@
                   <div class="short-middle-flexer">
                     <div class="main-text-holder">
                       <div class="main-text">
-                        ${{ formatMoney(Number(totalDeposit).toFixed(2)) }} USD
+                        ${{
+                          formatMoney(Number(user.totalDeposit).toFixed(2))
+                        }}
+                        USD
                       </div>
                     </div>
                     <img
@@ -153,7 +156,9 @@
                   <div class="short-middle-flexer">
                     <div class="main-text-holder">
                       <div class="main-text">
-                        ${{ formatMoney(Number(pendingWithdrawal).toFixed(2)) }}
+                        ${{
+                          formatMoney(Number(user.pendingWithdrawal).toFixed(2))
+                        }}
                         USD
                       </div>
                     </div>
@@ -174,7 +179,10 @@
               </div>
               <div class="short-down">
                 <h1 class="sub-heading">
-                  ${{ formatMoney(Number(pendingWithdrawal).toFixed(2)) }} USD
+                  ${{
+                    formatMoney(Number(user.pendingWithdrawal).toFixed(2))
+                  }}
+                  USD
                 </h1>
                 <img
                   src="https://uploads-ssl.webflow.com/64300ab9bc516802715bbe1b/6432a130bc4ac1a632474a5d_3-vertical-dots-icon%201.svg"
@@ -188,12 +196,14 @@
               <div class="short-top">
                 <div class="short-side-contents">
                   <div class="main-header-holder">
-                    <h1 class="main-header">Total Withdrawal</h1>
+                    <h1 class="main-header">Pending Deposit</h1>
                   </div>
                   <div class="short-middle-flexer">
                     <div class="main-text-holder">
                       <div class="main-text">
-                        ${{ formatMoney(Number(totalWithdrawal).toFixed(2)) }}
+                        ${{
+                          formatMoney(Number(user.pendingDeposit).toFixed(2))
+                        }}
                         USD
                       </div>
                     </div>
@@ -214,7 +224,7 @@
               </div>
               <div class="short-down">
                 <h1 class="sub-heading">
-                  ${{ formatMoney(Number(totalWithdrawal).toFixed(2)) }} USD
+                  ${{ formatMoney(Number(user.pendingDeposit).toFixed(2)) }} USD
                 </h1>
                 <img
                   src="https://uploads-ssl.webflow.com/64300ab9bc516802715bbe1b/6432a130bc4ac1a632474a5d_3-vertical-dots-icon%201.svg"
@@ -355,7 +365,10 @@
                   </div>
                   <div class="day-header-holder">
                     <h1 class="main-header total">
-                      ${{ formatMoney(Number(totalDeposit).toFixed(2)) }} USD
+                      ${{
+                        formatMoney(Number(user.totalDeposit).toFixed(2))
+                      }}
+                      USD
                     </h1>
                   </div>
                 </div>
@@ -367,7 +380,10 @@
                   </div>
                   <div class="day-header-holder">
                     <h1 class="main-header total">
-                      ${{ formatMoney(Number(totalWithdrawal).toFixed(2)) }} USD
+                      ${{
+                        formatMoney(Number(user.totalWithdrawal).toFixed(2))
+                      }}
+                      USD
                     </h1>
                   </div>
                 </div>

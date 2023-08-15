@@ -348,8 +348,10 @@ export default {
         );
         return;
       } else {
-        if (this.amount > this.selectedPlan.planMaximum) {
-          this.amount = this.selectedPlan.planMaximum;
+        if (this.selectedPlan.planMaximum != 0) {
+          if (this.amount > this.selectedPlan.planMaximum) {
+            this.amount = this.selectedPlan.planMaximum;
+          }
         }
       }
     },
