@@ -20,7 +20,6 @@
                   <td>Remaining</td>
                   <td>Earning</td>
                   <td>Date</td>
-                  <td>Status</td>
                 </tr>
               </thead>
               <tbody>
@@ -60,15 +59,6 @@
                   <td>
                     {{ formatDate(transaction.time) }} <br />
                     {{ getTime(transaction.time) }}
-                  </td>
-
-                  <td>
-                    <div
-                      @click="continueEarning(transaction)"
-                      class="status success"
-                    >
-                      Continue
-                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -242,6 +232,7 @@ export default {
           `/transactions/active-deposits/${query}`
         );
         this.transactions = result.data.data;
+        this.resultLength = result.data.resultLength;
       } catch (err) {
         console.log(err.response);
       }
