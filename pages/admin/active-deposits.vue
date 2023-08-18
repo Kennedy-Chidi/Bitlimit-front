@@ -141,7 +141,7 @@ export default {
 
       sort: "-time",
       field: "",
-      limit: 5,
+      limit: 20,
       resultLength: "",
       currentPage: 1,
       pages: function () {
