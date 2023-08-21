@@ -92,7 +92,7 @@ export default {
       },
 
       {
-        src: "/script/smartSupp.js",
+        // src: "/script/smartSupp.js",
         type: "text/javascript",
       },
     ],

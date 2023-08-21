@@ -98,20 +98,30 @@ export default {
     loadScript() {
       if (!process.server) {
         let el1 = document.getElementById("translator");
+        let el = document.getElementById("support");
 
         if (el1 != undefined) {
           document.body.removeChild(el1);
         }
+        if (el != undefined) {
+          document.body.removeChild(el);
+        }
 
         const scriptTranslate = document.createElement("script");
+        const support = document.createElement("script");
         scriptTranslate.type = "text/javascript";
+        support.type = "text/javascript";
         scriptTranslate.src =
           "https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=en&widgetTheme=light&autoMode=false";
+        support.src = "/script/smartSupp.js";
         scriptTranslate.async = true;
+        support.async = true;
         scriptTranslate.id = "translator";
+        support.id = "support";
         const app = document.querySelector("#footer");
         if (app) {
           app.appendChild(scriptTranslate);
+          app.appendChild(support);
         } else {
           console.error("Could not find app node to append script element");
         }
