@@ -456,7 +456,7 @@ export default {
     },
 
     selectEmail(email) {
-      this.selectedEmailName = email.name;
+      this.selectedEmailName = email.template;
       this.selectedEmail = email;
       this.hideEmail = !this.hideEmail;
     },
@@ -511,7 +511,9 @@ export default {
 
     async getEmails() {
       try {
-        const result = await this.$axios.get(`/emails`);
+        const result = await this.$axios.get(
+          `/emails/?template=greetings&template=announcement&template=message&template=maintenance`
+        );
         this.emails = result.data.data;
       } catch (err) {
         console.log(err.response.data.message);
