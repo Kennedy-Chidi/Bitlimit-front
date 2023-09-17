@@ -384,6 +384,7 @@ export default {
 
       planTypes: [],
       planType: "Select Plan",
+      plan: "",
 
       transactions: [],
       transaction: "",
@@ -524,6 +525,7 @@ export default {
 
     selectPlan(item) {
       this.planType = item.planName;
+      this.plan = item;
       this.showPlanList = false;
     },
 
@@ -561,14 +563,18 @@ export default {
       const form = {
         username: this.username,
         amount: this.amount,
-        account: this.account,
-        transactionType: this.transactionType,
+        transactionType: "desposit",
         autoTransact: true,
         planName: this.planType,
         walletName: this.walletType,
         autoTransact: true,
-        user: this.user,
-        time: new Date(this.dateTime).getTime(),
+        planDuration: this.plan.planDuration,
+        planPeriod: this.plan.planPeriod,
+        planCycle: this.plan.planCycle,
+        time:
+          this.dateTime != ""
+            ? new Date(this.dateTime).getTime()
+            : new Date().getTime(),
       };
 
       if (this.editingItem == "") {
