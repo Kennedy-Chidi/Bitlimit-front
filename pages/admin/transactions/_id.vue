@@ -563,14 +563,15 @@ export default {
       const form = {
         username: this.username,
         amount: this.amount,
-        transactionType: "desposit",
+        transactionType: "deposit",
         autoTransact: true,
         planName: this.planType,
         walletName: this.walletType,
         autoTransact: true,
         planDuration: this.plan.planDuration,
-        planPeriod: this.plan.planPeriod,
+        // planPeriod: this.plan.planPeriod,
         planCycle: this.plan.planCycle,
+        user: this.user,
         time:
           this.dateTime != ""
             ? new Date(this.dateTime).getTime()
