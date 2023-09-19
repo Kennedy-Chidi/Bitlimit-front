@@ -571,6 +571,7 @@ export default {
         planDuration: this.plan.planDuration,
         // planPeriod: this.plan.planPeriod,
         planCycle: this.plan.planCycle,
+        percent: this.plan.planPercentage,
         user: this.user,
         time:
           this.dateTime != ""
