@@ -176,8 +176,8 @@ export default {
     },
 
     getDuration(data) {
-      if (!data) {
-        return "N/A";
+      if (data == 0) {
+        return 0;
       } else {
         return data / (24 * 60 * 60 * 1000);
       }
