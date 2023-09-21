@@ -535,7 +535,7 @@ export default {
 
   mounted() {
     this.getWallets();
-    this.getComment();
+    // this.getComment();
   },
 
   computed: {
